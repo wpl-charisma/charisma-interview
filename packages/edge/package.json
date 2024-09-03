@@ -1,0 +1,17 @@
+{
+  "name": "@charisma/edge",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "localtunnel": "^2.0.2",
+    "supabase": "^1.190.0"
+  },
+  "dependencies": {
+  },
+  "scripts": {
+    "build-types": "./build.sh",
+    "dev": "yarn supabase functions serve",
+    "deploy": "yarn supabase functions deploy trpc --no-verify-jwt"
+  }
+}

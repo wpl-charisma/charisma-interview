@@ -1,0 +1,13 @@
+{
+  "name": "charisma",
+  "version": "1.0.0",
+  "repository": "git@github.com:wpl-charisma/charisma.git",
+  "author": "David Fine <david@davidfine.dev>",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "packages/*",
+    "packages/edge/dist/*"
+  ],
+  "private": true,
+  "packageManager": "yarn@1.22.19"
+}
