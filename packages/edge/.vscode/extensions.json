@@ -2,6 +2,8 @@
   "recommendations": [
     "denoland.vscode-deno",
     "streetsidesoftware.code-spell-checker",
-    "github.copilot"
+    "github.copilot",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github"
   ]
 }

@@ -44,7 +44,7 @@ export const appRouter = router({
   reverseEmail: publicProcedure
     .input(
       z.object({
-        email: z.string(),
+        email: z.string().email(),
       }),
     )
     .query(({ input }) => {

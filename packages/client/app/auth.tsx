@@ -1,8 +1,19 @@
 import { StyleSheet, Alert, View, TextInput, Button } from 'react-native';
-import React, { useState } from 'react';
+import React, { FC, useMemo, useState } from 'react';
 import { supabase } from '@/state/supabase';
+import { useAuthProtected } from '@/hooks/auth-protected';
+import { router } from 'expo-router';
 
-const AuthScreen = () => {
+const AuthScreen: FC = () => {
+  const authProtectedOpts = useMemo<Parameters<typeof useAuthProtected>[0]>(
+    () => ({
+      action: () => router.replace('/'),
+      condition: (user) => !user,
+    }),
+    []
+  );
+  useAuthProtected(authProtectedOpts);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
